@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container" id="example">
+    <h1>MVVM EX</h1>
+    <hr>
+    <div class="">
+        <input type="text" data-bind="value:firstName" />
+        <hr />
+        <select data-bind="options: optionsTest"></select>
+        <hr />
+        <select data-bind="options: optionsTestKeyli"></select>
+        <hr />
+        <select data-bind="optionsObject: optionsTestObjectModel, optionText:aSillyName, optionValue:aSillyValue, value: denemeVal"></select>
+        <hr />
+        <label>
+            Bind Checked
+            <input type="checkbox" data-bind="checked: checkedBooleanDeneme">
+        </label>
+        <hr />
+        <label>
+            Hasan
+            <input type="checkbox" value="Hasan" data-bind="checked: checkedArrayDeneme">
+        </label>
+        <label>
+            Cenk
+            <input type="checkbox" value="Cenk" data-bind="checked: checkedArrayDeneme">
+        </label>
+        <label>
+            Tosun
+            <input type="checkbox" value="Tosun" data-bind="checked: checkedArrayDeneme">
+        </label>
+        <hr />
+        <label>
+            Hasan
+            <input type="radio" name="flavorGroup" value="Hasan" data-bind="radio: checkedArrayDeneme">
+        </label>
+        <label>
+            Cenk
+            <input type="radio" name="flavorGroup" value="Cenk" data-bind="radio: checkedArrayDeneme">
+        </label>
+        <label>
+            Tosun
+            <input type="radio" name="flavorGroup" value="Tosun" data-bind="radio: checkedArrayDeneme">
+        </label>
+        <hr />
+        <button class="btn btn-default" type="submit" data-bind="enable: checkedBooleanDeneme">
+            ENABLE DENEME
+        </button>
+        <button class="btn btn-default" type="submit" data-bind="disable: checkedBooleanDeneme">
+            DISABLE DENEME
+        </button>
+        <hr />
+        <h3 data-bind="display: checkedBooleanDeneme">DISPLAY DENEME LOREM IPSUM</h3>
+        <hr />
+        <ul class="list-unstyled" data-bind="foreach:optionsTestObjectModel">
+            <li>
+                <span data-bind="text:aSillyName">aa</span>
+                <span data-bind="text:aSillyValue">bbb</span>
+            </li>
+        </ul>
+        <hr />
+        <textarea data-bind="value: textareaVal"></textarea>
+        <hr />
+        <input type="number" data-bind="value: integerVal" />
+        <hr />
+        <input type="color" data-bind="value: colorVal" />
+        <hr />
+        <input type="tel" data-bind="value: telVal" />
+        <hr />
+        <input type="email" data-bind="value: emailVal" />
+        <hr />
+    </div>
+    <div class="jumbotron">
+        <p><span data-bind="text:dotli.aName"></span></p>
+        <p><span data-bind="text:firstName"></span></p>
+        <hr />
+        <span data-bind="text:checkedArrayDeneme"></span>
+        <hr />
+        <span data-bind="text:denemeVal"></span>
+        <hr />
+        <a data-bind="custom: cbDeneme">asd</a>
+        <hr />
+        <span data-bind="text:integerVal, custom:cbTypeof"></span>
+        <hr />
+        <span data-bind="text:colorVal"></span>
+        <hr />
+        <span data-bind="text:telVal"></span>
+        <hr />
+        <span data-bind="text:emailVal"></span>
+        <hr />
+
+
+    </div>
+</div>
+
+<!-- FRAMEWORK FILES. IT WILL BE ONE FILE -->
+<script src="work/toDo/action/baseAction.js"></script>
+<script src="work/toDo/action/valueAction.js"></script>
+<script src="work/toDo/action/bindAction.js"></script>
+<script src="work/toDo/action/controlAction.js"></script>
+<script src="work/toDo/bindMap.js"></script>
+<script src="work/toDo/mvvm.js"></script>
+<!-- end of FRAMEWORK FILES -->
+
+<!--example-->
+<script src="work/js/example.js"></script>
+
+</body>
+</html>
